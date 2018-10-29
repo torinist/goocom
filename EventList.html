@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
+  <link rel="stylesheet" type="text/css" href="./css/EventList.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>イベントリスト</title>
+</head>
+<body>
+  <div id="main">
+    <div id="messageArea">message</div>
+    <div id="inputArea">
+      <div class="row">
+        <input type="button" value="Add" id="addBtn"/>
+      </div>
+      <div class="row">
+        <select id="selectYear">
+          <option>2017年</option>
+          <option>2018年</option>
+        </select>
+      </div>
+    </div>
+    <div id="contentsArea">
+      <p><span class="eventDate">20181001</span><span>イベント名</span></p>
+      <p><span class="eventDate">20181002</span><span>イベント名</span></p>
+    </div>
+  </div>
+
+  <!-- add pop-up -->
+  <div class="popupOverlay">
+    <div class="row">
+      <span class="inputLabel">日付</span><input type="date"/>
+    </div>
+    <div class="row">
+      <span class="inputLabel">イベント名</span><input type="text" placeholder="イベント名を入力"/>
+    </div>
+    <div class="popupInputArea">
+      <input type="button" value="OK" id="okBtn" />
+      <input type="button" value="キャンセル" id="cancelBtn" />
+    </div>
+  </div>
+  <script src="./js/EventList.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 50%;
+  margin: auto;
+}
+
+/** messageAreaの設定 */
+#messageArea {
+  visibility: hidden;
+}
+
+#messageArea.show {
+  visibility: visible;
+}
