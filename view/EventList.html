@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="./css/common.css">
-  <link rel="stylesheet" type="text/css" href="./css/EventList.css">
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/EventList.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <title>イベントリスト</title>
 </head>
 <body>
+  <div id="header">
+
+  </div>
+  <div id="messageArea">message</div>
   <div id="main">
-    <div id="messageArea">message</div>
     <div id="inputArea">
       <div class="row">
         <input type="button" value="Add" id="addBtn"/>
@@ -28,6 +31,9 @@
       <p><span class="eventDate">20181002</span><span>イベント名</span></p>
     </div>
   </div>
+  <div id="footer">
+
+  </div>
 
   <!-- add pop-up -->
   <div class="popupOverlay">
@@ -42,6 +48,6 @@
       <input type="button" value="キャンセル" id="cancelBtn" />
     </div>
   </div>
-  <script src="./js/EventList.js"></script>
+  <script src="../js/EventList.js"></script>
 </body>
 </html>
