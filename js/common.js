@@ -1,25 +1,38 @@
-(function($) {
+/**
+ * メッセージをエラーレベルで出力
+ * @param {String} message 
+ */
+function showMessageAreaWithError(message) {
+  showMessageArea(message, "error");
+  // mainエリア下をDOMから削除する
+  emptyMain();
+}
 
-  function showMessageAreaWithError(message) {
-    showMessageArea(message, "error");
-  }
-  
-  /**
-   * messageAreaを表示する
-   */
-  function showMessageArea(message, level) {
-    let $message = $("#messageArea");
-    $message.append('<p class="' + level +  '">' + message + '</p>');
-    $message.addClass("show");
-  }
+/**
+ * messageAreaを表示する
+ * levelが指定されていなかった場合は、infoで出力
+ * @param {String} message 
+ * @param {String} level 
+ */
+function showMessageArea(message, level) {
+  let $message = $("#messageArea");
+  $message.append('<div class="' + level +  ' alert alert-danger" role="alert">' + message + '</div>');
+  $message.addClass("show");
+}
 
-  /**
-   * messageAreaを非表示にする
-   */
-  function hideMessageArea() {
-    let $message = $("#messageArea");
-    $message.empty();
-    $message.removeClass("show");
-  }
+/**
+ * messageAreaを非表示にする
+ */
+function hideMessageArea() {
+  let $message = $("#messageArea");
+  $message.empty();
+  $message.removeClass("show");
+}
 
-})(jQuery);
+/**
+ * mainを空にする
+ */
+function emptyMain() {
+  let $main = $("#main");
+  $main.empty();
+}

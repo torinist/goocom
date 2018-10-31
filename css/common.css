@@ -45,12 +45,9 @@ body {
 /** messageAreaの設定 */
 #messageArea {
   visibility: hidden;
+  margin: 10px;
 }
 
 #messageArea.show {
   visibility: visible;
-}
-
-#messageArea.show > p.error {
-  background-color: rgba(248, 109, 109, 0.3);
 }
